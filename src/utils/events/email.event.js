@@ -5,7 +5,7 @@ export const emailEvent = new EventEmitter()
 
 emailEvent.on("Confirm email", async(data)=> {
     await sendEmail({to: data.to, subject:data.subject || "Confirm email",
-         html:verifyEmailTemplate({otp:Date.now()})}).catch(error => {
+         html:verifyEmailTemplate({otp:data.otp})}).catch(error => {
         console.log(`Failed to send email to ${data.to}`);
         
     })
@@ -13,7 +13,7 @@ emailEvent.on("Confirm email", async(data)=> {
 
 emailEvent.on("SendForgotPassword", async(data)=> {
     await sendEmail({to: data.to, subject:data.subject || "Forgot email",
-         html:verifyEmailTemplate({otp:Date.now(), title:data.title})}).catch(error => {
+         html:verifyEmailTemplate({otp:data.otp, title:data.title})}).catch(error => {
         console.log(`Failed to send email to ${data.to}`);
         
     })

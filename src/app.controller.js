@@ -1,7 +1,7 @@
 import path from 'node:path'
 import * as dotenv from 'dotenv'
-// dotenv.config({path: path.join('./src/config/.env.dev')})
-dotenv.config({})
+dotenv.config({path: path.join('./src/config/.env.dev')})
+// dotenv.config({})
 import express from 'express'
 import authController from './modules/auth/auth.controller.js'
 import userController from './modules/user/user.controller.js'
@@ -16,7 +16,9 @@ import morgan from 'morgan'
 import helmet from 'helmet'
 import {rateLimit} from 'express-rate-limit'
 
+
 const bootstrap = async() => {
+    
 const app = express()
 const port = process.env.PORT || 5000
 // const whitelist = process.env.ORIGINS.split(",")

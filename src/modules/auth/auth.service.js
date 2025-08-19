@@ -28,7 +28,7 @@ export const signup = asyncHandler(async (req, res, next) => {
     model: UserModel,
     data: [{ fullName, email, password: hashPassword, phone: encPhone, confirmEmailOtp }]
   })
-emailEvent.emit("Confirm Email",{to:email,otp:Date.now()})
+emailEvent.emit("Confirm Email",{to:email,otp})
   return successResponse({ res, status: 201, data: { user } })
 })
 

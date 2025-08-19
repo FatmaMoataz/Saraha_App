@@ -1,5 +1,6 @@
 import joi from "joi";
 import { generalFields } from "../../middleware/validation.middleware.js";
+import { fileValidation } from "../../utils/multer/cloud.multer.js";
 
 export const sendMessage = {
     params:joi.object().keys({

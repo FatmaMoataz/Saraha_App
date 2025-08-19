@@ -16,3 +16,5 @@ router.post("/:receiverId/sender",authentication(), cloudFileUpload({validation:
 validation(validators.sendMessage),
 messageService.sendMessage
 )
+
+export default router

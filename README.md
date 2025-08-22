@@ -14,7 +14,8 @@ A backend project for a Saraha-style anonymous messaging app, built with **Node.
 ## 📸 Screenshots
 - Successful Sign Up request from Postman
 - ![Image](https://github.com/user-attachments/assets/c71cec9e-50bf-4c4b-8ff4-abe950644066)
-- Successful Confirm Email request with OTP  
+- Successful Confirm Email request with OTP
+- ![Image](https://github.com/user-attachments/assets/2548d6ec-39f4-4528-a868-c39de4748713)
 - User data stored in MongoDB Compass  
 
 ## 💡 Skills Improved
